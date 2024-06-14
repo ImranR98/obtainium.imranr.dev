@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'MetropolisRegular';
+    src: url('Metropolis-Regular.otf'); /* http://scripts.sil.org/OFL */
+  }
+
+html, body {
+    background: linear-gradient(
+        333deg,
+        rgba(68, 62, 77, 1) 0%,
+        rgba(19, 2, 28, 1) 100%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #d2bcfd !important;
+    font-family: "MetropolisRegular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    color: #d2bcfd;
+}
+
+a {
+    color: inherit;
+}
+
+.title * {
+    color: #ebe1ff;
+}
+
+.main-icon {
+    width: 5rem;
+    object-fit: cover;
+    background-color: #ebe1ff;
+    clip-path: circle(50% at center);
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.screenshots img {
+    max-width: 10rem;
+    border-radius: 0.5rem;
+    margin: 1rem;box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.footer {
+    padding: 2rem;
+    background-color: #211f24;
+}
+
+.footer * {
+    color: #ebe1ff;
+}
