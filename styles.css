@@ -29,7 +29,8 @@ h1 {
     font-weight: 700;
 }
 
-html, .footer {
+html,
+.footer {
     background-color: #211f24;
 }
 
@@ -37,7 +38,8 @@ html, .footer {
     padding: 2rem;
 }
 
-.title *, .footer * {
+.title *,
+.footer * {
     color: #ebe1ff;
 }
 
@@ -53,4 +55,9 @@ html, .footer {
     border-radius: 0.5rem;
     margin: 1rem;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.signature {
+    font-weight: bold;
+    text-decoration: none;
 }
