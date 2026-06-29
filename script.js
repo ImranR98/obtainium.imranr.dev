@@ -4,10 +4,10 @@ window.onload = async () => {
     const tag = (await response.json()).tag_name;
     if (dd) {
         dd.innerHTML = `
-        <a type="button" class="btn btn-warning" href="https://github.com/ImranR98/Obtainium/releases/download/${tag}/app-release.apk">Download Universal APK</a>
-        <a type="button" class="btn btn-outline-warning" href="https://github.com/ImranR98/Obtainium/releases/download/${tag}/app-arm64-v8a-release.apk">armv8</a>
-        <a type="button" class="btn btn-outline-warning" href="https://github.com/ImranR98/Obtainium/releases/download/${tag}/app-armeabi-v7a-release.apk">armv7</a>
-        <a type="button" class="btn btn-outline-warning" href="https://github.com/ImranR98/Obtainium/releases/download/${tag}/app-x86_64-release.apk">x64</a>
+        <a class="btn btn-filled" href="https://github.com/ImranR98/Obtainium/releases/download/${tag}/app-release.apk">Download Universal APK</a>
+        <a class="btn btn-outline" href="https://github.com/ImranR98/Obtainium/releases/download/${tag}/app-arm64-v8a-release.apk">armv8</a>
+        <a class="btn btn-outline" href="https://github.com/ImranR98/Obtainium/releases/download/${tag}/app-armeabi-v7a-release.apk">armv7</a>
+        <a class="btn btn-outline" href="https://github.com/ImranR98/Obtainium/releases/download/${tag}/app-x86_64-release.apk">x64</a>
         `
     }
 }
