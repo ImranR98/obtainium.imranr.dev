@@ -10,4 +10,9 @@ window.onload = async () => {
         <a class="btn btn-outline" href="https://github.com/ImranR98/Obtainium/releases/download/${tag}/app-x86_64-release.apk">x64</a>
         `
     }
+
+    const kaoNote = document.querySelector('#kaoNote');
+    if (kaoNote && Date.now() < new Date('Jan 1, 2027 00:00:00').getTime()) {
+        kaoNote.hidden = false;
+    }
 }
