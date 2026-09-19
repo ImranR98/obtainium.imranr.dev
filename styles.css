@@ -158,7 +158,7 @@ code {
     height: auto;
     max-width: 10rem;
     max-height: 18rem;
-    border-radius: 1.25rem;
+    border-radius: 0.5rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
                 box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -168,6 +168,89 @@ code {
 .screenshot-card:hover img {
     transform: scale(1.03);
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.82);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease, visibility 200ms ease;
+}
+
+.lightbox.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-image {
+    max-width: 92vw;
+    max-height: 88vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+    transform: scale(0.96);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox.open .lightbox-image {
+    transform: scale(1);
+}
+
+.lightbox-btn {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.55);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.75rem;
+    line-height: 1;
+    padding-bottom: 0.2rem;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+.lightbox-btn:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.lightbox-btn:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.lightbox-close {
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 1.5rem;
+    padding-bottom: 0;
+}
+
+.lightbox-prev {
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-next {
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Features */
@@ -349,5 +432,38 @@ code {
 
     .hero-tagline {
         font-size: 1rem;
+    }
+
+    .lightbox-btn {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1.375rem;
+    }
+
+    .lightbox-image {
+        max-width: calc(100vw - 1.5rem);
+        max-height: calc(100vh - 1.5rem);
+        max-height: calc(100dvh - 1.5rem);
+    }
+
+    .lightbox-close {
+        top: 0.25rem;
+        right: 0.25rem;
+        font-size: 1.125rem;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+    }
+
+    .lightbox-prev {
+        left: 0.25rem;
+    }
+
+    .lightbox-next {
+        right: 0.25rem;
     }
 }
